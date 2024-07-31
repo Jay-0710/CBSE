@@ -1,0 +1,88 @@
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/home")
+public class HomeServlet extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html");
+        response.getWriter().println("<!DOCTYPE html>");
+        response.getWriter().println("<html lang='en'>");
+        response.getWriter().println("<head>");
+        response.getWriter().println("<meta charset='UTF-8'>");
+        response.getWriter().println("<title>Home Page</title>");
+        response.getWriter().println("<style>");
+        response.getWriter().println("body {");
+        response.getWriter().println("    font-family: Arial, sans-serif;");
+        response.getWriter().println("    background: linear-gradient(to right, #ffecd2, #fcb69f);");
+        response.getWriter().println("    color: #000000;");
+        response.getWriter().println("    margin: 0;");
+        response.getWriter().println("    padding: 0;");
+        response.getWriter().println("    text-align: center;");
+        response.getWriter().println("}");
+        response.getWriter().println("h1 {");
+        response.getWriter().println("    color: #000000;");
+        response.getWriter().println("    padding: 20px;");
+        response.getWriter().println("    background-color: #ff9800;");
+        response.getWriter().println("    margin: 0;");
+        response.getWriter().println("    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);");
+        response.getWriter().println("}");
+        response.getWriter().println("p {");
+        response.getWriter().println("    font-size: 1.2em;");
+        response.getWriter().println("    padding: 20px;");
+        response.getWriter().println("    background-color: #ffffff;");
+        response.getWriter().println("    border-radius: 8px;");
+        response.getWriter().println("    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);");
+        response.getWriter().println("    display: inline-block;");
+        response.getWriter().println("}");
+		response.getWriter().println("a {");
+response.getWriter().println("    display: inline-block;");
+response.getWriter().println("    margin: 20px;");
+response.getWriter().println("    padding: 15px 30px;");
+response.getWriter().println("    font-size: 16px;");
+response.getWriter().println("    font-weight: bold;");
+response.getWriter().println("    text-transform: uppercase;");
+response.getWriter().println("    text-decoration: none;");
+response.getWriter().println("    color: #fff;");
+response.getWriter().println("    background-color: #008000;");
+response.getWriter().println("    border: none;");
+response.getWriter().println("    border-radius: 13px;");
+response.getWriter().println("    position: relative;");
+response.getWriter().println("    overflow: hidden;");
+response.getWriter().println("    transition: background-color 0.3s, transform 0.3s;");
+response.getWriter().println("    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);");
+response.getWriter().println("}");
+response.getWriter().println("a::before {");
+response.getWriter().println("    content: '';");
+response.getWriter().println("    position: absolute;");
+response.getWriter().println("    top: 50%;");
+response.getWriter().println("    left: 50%;");
+response.getWriter().println("    width: 300%;");
+response.getWriter().println("    height: 300%;");
+response.getWriter().println("    background-color: rgba(255, 255, 255, 0.15);");
+response.getWriter().println("    transform: translate(-50%, -50%) rotate(45deg);");
+response.getWriter().println("    transition: width 0.5s ease, height 0.5s ease;");
+response.getWriter().println("}");
+response.getWriter().println("a:hover::before {");
+response.getWriter().println("    width: 0;");
+response.getWriter().println("    height: 0;");
+response.getWriter().println("}");
+response.getWriter().println("a:hover {");
+response.getWriter().println("    background-color: #ff6347;");
+response.getWriter().println("    transform: scale(1.1);");
+response.getWriter().println("}");
+        response.getWriter().println("</style>");
+        response.getWriter().println("</head>");
+        response.getWriter().println("<body>");
+        response.getWriter().println("<h1>Home Page</h1>");
+        response.getWriter().println("<p>Welcome to the CBSE Board Home Page</p>");
+		response.getWriter().println("<a href='index.html'>HOME</a>");
+        response.getWriter().println("</body>");
+        response.getWriter().println("</html>");
+    }
+}
